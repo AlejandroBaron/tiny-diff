@@ -1,0 +1,100 @@
+[project]
+name = "tiny-diff"
+dynamic = ["version"]
+description = "Hackable implementation of diffusion models"
+authors = [
+    {name = "Alejandro Barón", email = "alejandrobarongarcia10@gmail.com"},
+]
+dependencies = [
+    "torch<2.4,>=2",
+]
+requires-python = ">=3.9"
+readme = "README.md"
+license = {text = "MIT"}
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+
+[tool.pdm]
+distribution = true
+[tool.pdm.version]
+source = "scm"
+fallback_version = "0.1.0"
+write_to = "tiny_diff/version.info"
+
+[tool.ruff]
+line-length = 88
+[tool.ruff.lint]
+select = [
+    "A",
+    "B",
+    "C4",
+    "C90",
+    "D",
+    "E",
+    "F",
+    "FA",
+    "NPY",
+    "PERF",
+    "PIE",
+    "PL",
+    "PT",
+    "Q",
+    "RET",
+    "RUF",
+    "S",
+    "SIM",
+    "TD",
+    "TID",
+    "T10",
+    "UP",
+    "W",
+    "YTT"
+]
+extend-select = [
+    "I",  # see: isort
+    "C4",  # see: https://pypi.org/project/flake8-comprehensions
+    "SIM",  # see: https://pypi.org/project/flake8-simplify
+    "RET",  # see: https://pypi.org/project/flake8-return
+    "PT",  # see: https://pypi.org/project/flake8-pytest-style
+    "RUF100",  # see: https://docs.astral.sh/ruff/rules/unused-noqa/
+]
+ignore = [
+    "D100",
+    "D104",
+    "D107",
+    "D202",
+    "D105",
+    "D401",
+    "FA100",
+    "RET504",
+    "RUF013",
+    "TD002",
+    "TD003",
+    "FIX002",
+    "UP007",
+    "UP038",
+    "UP035",
+]
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S101"]
+[tool.ruff.lint.mccabe]
+max-complexity = 10
+[tool.ruff.lint.pydocstyle]
+convention = 'google'
+[tool.ruff.lint.pylint]
+max-args = 10
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "pytest>=8.3.2",
+    "pre-commit>=3.8.0",
+]
+tutorials = [
+    "torchvision>=0.18.1",
+    "torchtune>=0.2.1",
+    "matplotlib>=3.9.2",
+    "mlflow>=2.16.0",
+]
