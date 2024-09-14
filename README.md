@@ -13,7 +13,7 @@ It aims to:
 - Be object oriented to enable end users to extend the SDK for their custom workflows
 - Be, as it name states, easy to use (hence focused in simple usecases)
 - Have as little duplicated code as possible.
-- Be modular so users can reuse layers, blocks if they
+- Be modular so users can reuse layers, blocks and utilities
 
 You can check more info at the [documentation site](https://tiny-diff.readthedocs.io/en/latest/).
 Conditional diffusion is still to be included.
