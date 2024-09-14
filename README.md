@@ -1,6 +1,10 @@
 [![pdm-managed](https://img.shields.io/endpoint?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fpdm-project%2F.github%2Fbadge.json)](https://pdm-project.org)
 
+<img src="assets/logo.jpg" alt="Alt text" width="128" height="128">
+
 # Tiny Diff (Beta)
+
+
 
 This project attempts to provide a minimal implementation of diffusion models written in pure python, without huggingface dependencies.
 
@@ -126,3 +130,19 @@ nonlinearity_factory = LayerFactory(cls=LeakyReLU, kwargs={"negative_slope": 0.0
 ```
 If you look at the VAE or UNet model, it's trivial to see how to change the attention or non_linearity throughout the
 whole network.
+
+## Citation
+
+If you use this repository in your research, please cite it as follows:
+
+### Citation for the Repository
+
+```bibtex
+@misc{YourRepoName,
+  author = {Alejandro Baron},
+  title = {TinyDiff: A hackable pure-torch diffusion implementation},
+  year = {2024},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/AlejandroBaron/tiny-diff}},
+}
